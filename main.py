@@ -12,6 +12,8 @@ SESSION_TYPE = 'filesystem'
 app.config.from_object(__name__)
 Session(app)
 
+# Updated Flask Routes
+
 @app.route('/set')
 def set():
     session['time'] = time.time()
@@ -134,11 +136,3 @@ def send_static(path):
 if __name__ == '__main__':
    app.secret_key = '1234'
    app.run(host='127.0.0.1',debug=True)
-   
-   
-   
-   
-   
-   
-   
-   
