@@ -12,6 +12,8 @@ SESSION_TYPE = 'filesystem'
 app.config.from_object(__name__)
 Session(app)
 
+# Added user endpoints
+
 @app.route('/set')
 def set():
     session['time'] = time.time()
